@@ -27,6 +27,5 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::get('show/{id}', [UserController::class, 'show']);
     Route::put('update/{id}', [UserController::class, 'update']);
 });
-
 Route::post('/login', [AuthController::class,"login"]);
 
