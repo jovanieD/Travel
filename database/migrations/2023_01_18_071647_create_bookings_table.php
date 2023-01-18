@@ -23,6 +23,7 @@ class CreateBookingsTable extends Migration
             $table->string('departure');
             $table->char('departure_date');
             $table->char('arrival_date');
+            $table->unsignedBigInteger('user_id');
             $table->timestamps();
         });
     }

@@ -15,8 +15,7 @@ class DestinationFactory extends Factory
     {
         return [
             'place_name' => $this->faker->country,
-            'descriptions'=> $this->faker->text
-            //
+            'descriptions' => $this->faker->text,
         ];
     }
 }

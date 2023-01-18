@@ -29,3 +29,11 @@ Route::middleware('auth:sanctum')->group(function () {
 });
 Route::post('/login', [AuthController::class,"login"]);
 
+
+Route::get('/pivot', function(){
+    $booking = \App\Models\Booking::first();
+
+    $destiantion = \App\Models\Destination::first();
+
+    $destiantion->bookings()->sync([1 => ['qty' => 10, 'sub_total' => 5000]]) ;
+});

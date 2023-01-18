@@ -23,6 +23,7 @@ class BookingFactory extends Factory
             'departure' => $this->faker->city,
             'departure_date' => 'Monday, January 5, 2023 01:25',
             'arrival_date' => 'Monday, January 6, 2023 01:25',
+            'user_id' => User::first(),
         ];
     }
 }
