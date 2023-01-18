@@ -20,7 +20,7 @@ class CreatePackagesTable extends Migration
             $table->string('hotels');
             $table->bigInteger('contact_no');
             $table->double('discount',8,2);
-            $table->unsignedDecimal('destination_id');
+            $table->unsignedBigInteger('destination_id');
             $table->timestamps();
         });
     }
