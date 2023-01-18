@@ -13,7 +13,7 @@ class Destination extends Model
     ];
     use HasFactory;
 
-    public function orders()
+    public function book()
     {
         return $this->belongsToMany(Booking::class);
     }

@@ -2,7 +2,9 @@
 
 namespace Database\Factories;
 
+
 use Illuminate\Database\Eloquent\Factories\Factory;
+
 
 class DestinationFactory extends Factory
 {
@@ -15,7 +17,8 @@ class DestinationFactory extends Factory
     {
         return [
             'place_name' => $this->faker->country,
-            'descriptions'=> $this->faker->text
+
+            'descriptions'=> $this->faker->text,
             //
         ];
     }
