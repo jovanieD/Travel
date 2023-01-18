@@ -2,7 +2,11 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+<<<<<<< HEAD
 use App\Http\Controllers\UserController;
+=======
+use App\Http\Controllers\AuthController;
+>>>>>>> 832eb667ecc73fd5f0e708b808396489f61aeb1d
 
 /*
 |--------------------------------------------------------------------------
@@ -18,6 +22,7 @@ use App\Http\Controllers\UserController;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+<<<<<<< HEAD
 
 
 // Route::middleware('auth:sanctum')->group(function () {
@@ -26,3 +31,10 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     Route::get('show/{id}', [UserController::class, 'show']);
     Route::put('update/{id}', [UserController::class, 'update']);
 // });
+=======
+Route::middleware(['auth:sanctum'])->get('/user', function (Request $request) {
+    return $request->user();
+});
+Route::post('/login', [AuthController::class,"login"]);
+Route::get('/show', [AuthController::class,"index"]);
+>>>>>>> 832eb667ecc73fd5f0e708b808396489f61aeb1d
