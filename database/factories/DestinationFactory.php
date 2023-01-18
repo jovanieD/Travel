@@ -14,6 +14,8 @@ class DestinationFactory extends Factory
     public function definition()
     {
         return [
+            'place_name' => $this->faker->country,
+            'descriptions'=> $this->faker->text
             //
         ];
     }
