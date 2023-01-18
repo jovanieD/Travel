@@ -15,6 +15,8 @@ class CreateDestinationsTable extends Migration
     {
         Schema::create('destinations', function (Blueprint $table) {
             $table->id();
+            $table->string('place_name');
+            $table->string('descriptions');
             $table->timestamps();
         });
     }
