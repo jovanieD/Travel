@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Destination extends Model
 {
     use HasFactory;
+
+    public function orders()
+    {
+        return $this->belongsToMany(Booking::class);
+    }
 }
